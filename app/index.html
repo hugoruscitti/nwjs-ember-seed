@@ -3,19 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NodeWebkitEmberSeed</title>
+    <title>node-webkit-ember-seed</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- AGREGADOS PARA NODEWEBKIT -->
+    <script src='reemplazar-require-paso-1.js'></script>
+    <script src='capturar-excepciones.js'></script>
+
     {{content-for 'head'}}
 
+    <!-- AGREGADOS POR EMBERCLI -->
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/node-webkit-ember-seed.css">
+
   </head>
   <body>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>
     <script src="assets/node-webkit-ember-seed.js"></script>
+
+
+    <!-- AGREGADOS PARA NODEWEBKIT -->
+    <script src='reemplazar-require-paso-2.js'></script>
+    <script src='livereload.js'></script>
+
   </body>
 </html>

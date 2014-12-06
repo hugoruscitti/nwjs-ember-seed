@@ -1,0 +1,12 @@
+{
+  "main": "app://localhost/index.html",
+  "name": "node-webkit-ember-seed",
+  "version": "0.0.1",
+  "window": {
+    "title": "node-webkit-ember-seed",
+    "width": 800,
+    "height": 500,
+    "toolbar": true,
+    "position": "center"
+  }
+}
