@@ -1,0 +1,2 @@
+nodewebkit-ember-seed
+=====================
