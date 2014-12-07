@@ -22,4 +22,4 @@ Si estás usando node-webkit, lo mejor es lanzar el comando
 ``make mac_test`` y en la misma consola ``make watch`` para
 activar el modo livereload.
 
-En cambio, si usas *chrome*, usá el comando ``make preview`` y listo :)
+En cambio, si usas *chrome*, usá el comando ``make server`` y listo :)
