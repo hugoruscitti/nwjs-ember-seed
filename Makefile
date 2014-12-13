@@ -28,6 +28,7 @@ watch:
 actualizar:
 	git pull
 	npm install
+	bower install
 
 test_mac: build
 	@echo "Cuidado - se está usando la version de nodewebkit del sistema."
