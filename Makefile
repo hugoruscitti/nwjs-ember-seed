@@ -32,7 +32,7 @@ actualizar:
 
 test_mac: build
 	@echo "Cuidado - se está usando la version de nodewebkit del sistema."
-	open -a /Applications/node-webkit.app dist
+	open -a /Applications/node-webkit.app --args $(shell pwd)/dist
 
 version:
 	# patch || minor
