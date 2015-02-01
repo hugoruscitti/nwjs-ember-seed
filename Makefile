@@ -26,7 +26,6 @@ watch:
 	ember build --watch
 
 actualizar:
-	git pull
 	npm install
 	bower install
 
