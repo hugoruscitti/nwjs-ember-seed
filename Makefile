@@ -7,7 +7,7 @@ NAME=node-webkit-ember-seed
 all:
 	@echo "Comando disponibles"
 	@echo ""
-	@echo "  $(V)actualizar$(N)  Actualiza el repositorio e instala las dependencias."
+	@echo "  $(V)iniciar$(N)  Instala las dependencias necesarias."
 	@echo ""
 	@echo "  $(V)version$(N)     Genera la informacion de versión actualizada."
 	@echo "  $(V)ver_sync$(N)    Sube la nueva version al servidor."
