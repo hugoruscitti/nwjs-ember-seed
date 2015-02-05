@@ -2,7 +2,7 @@ N=[0m
 V=[01;32m
 
 VERSION=0.0.1
-NAME=node-webkit-ember-seed
+NAME=TXT_NOMBRE
 
 all:
 	@echo "Comando disponibles"
@@ -60,6 +60,9 @@ rename:
 	sed 's/node-webkit-ember-seed/${NAME}/g' app/index.html > __tmp; mv __tmp app/index.html
 	sed 's/node-webkit-ember-seed/${NAME}/g' config/environment.js > __tmp; mv __tmp config/environment.js
 	sed 's/node-webkit-ember-seed/${NAME}/g' tests/index.html > __tmp; mv __tmp tests/index.html
+
+iniciar:
+	npm install
 
 
 .PHONY: dist
