@@ -1,9 +1,9 @@
 {
   "main": "app://localhost/index.html",
-  "name": "node-webkit-ember-seed",
+  "name": "TXT_NOMBRE",
   "version": "0.0.1",
   "window": {
-    "title": "node-webkit-ember-seed",
+    "title": "TXT_NOMBRE",
     "width": 800,
     "height": 500,
     "toolbar": true,

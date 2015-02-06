@@ -1,5 +1,5 @@
 {
-  "name": "node-webkit-ember-seed",
+  "name": "TXT_NOMBRE",
   "dependencies": {
     "handlebars": "~1.3.0",
     "jquery": "^1.11.1",
@@ -13,5 +13,8 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0"
+  },
+  "resolutions": {
+    "handlebars": ">= 1.0.0 < 2.0.0"
   }
 }
