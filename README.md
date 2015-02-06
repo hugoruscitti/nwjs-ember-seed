@@ -1,7 +1,8 @@
-nwjs-ember-seed
-===============
+¡Hola, esto es TXT_NOMBRE!
+==========================
 
-Un marco de aplicación pensado como punto de partida
+Este proyecto está construido a partir de nwjs-ember-seed,
+un marco de aplicación pensado como punto de partida
 para hacer aplicaciones de escritorio usando javascript.
 
 ![](public/preview.png)

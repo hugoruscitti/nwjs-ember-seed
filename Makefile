@@ -1,37 +1,54 @@
-N=[0m
-V=[01;32m
-
 VERSION=0.0.1
-NAME=TXT_NOMBRE
+NOMBRE="TXT_NOMBRE"
 
-all:
-	@echo "Comando disponibles"
+N=[0m
+G=[01;32m
+Y=[01;33m
+B=[01;34m
+
+comandos:
 	@echo ""
-	@echo "  $(V)iniciar$(N)  Instala las dependencias necesarias."
+	@echo "${B}Comandos disponibles para ${G}TXT_NOMBRE${N}"
 	@echo ""
-	@echo "  $(V)version$(N)     Genera la informacion de versión actualizada."
-	@echo "  $(V)ver_sync$(N)    Sube la nueva version al servidor."
+	@echo "  ${Y}Para desarrolladores${N}"
 	@echo ""
-	@echo "  $(V)server$(N)      Prueba la aplicación en el navegador."
-	@echo "  $(V)build$(N)       Genera los archivos compilados."
-	@echo "  $(V)watch$(N)       Genera los archivos compilados de forma contínua."
+	@echo "    ${G}iniciar${N}         Instala dependencias."
+	@echo "    ${G}compilar${N}        Genera los archivos compilados."
+	@echo "    ${G}compilar_live${N}   Compila de forma contínua."
 	@echo ""
-	@echo "  $(V)test_mac$(N)    Prueba la aplicación sobre OSX"
+	@echo "    ${G}ejecutar_linux${N}  Prueba la aplicacion sobre Huayra."
+	@echo "    ${G}ejecutar_mac${N}    Prueba la aplicacion sobre OSX."
+	@echo ""
+	@echo "  ${Y}Para distribuir${N}"
+	@echo ""
+	@echo "    ${G}version${N}         Genera una nueva versión."
+	@echo "    ${G}subir_version${N}   Sube version generada al servidor."
+	@echo "    ${G}publicar${N}        Publica el cambio para el paquete deb."
+	@echo "    ${G}crear_deb${N}       Genera el paquete deb para huayra."
 	@echo ""
 
-build:
-	ember build
 
-watch:
-	ember build --watch
-
-actualizar:
+iniciar:
 	npm install
 	bower install
 
-test_mac: build
-	@echo "Cuidado - se está usando la version de nodewebkit del sistema."
-	open -a /Applications/node-webkit.app --args $(shell pwd)/dist
+ejecutar_linux:
+	nw src
+
+ejecutar_mac:
+	/Applications/nwjs.app/Contents/MacOS/nwjs src
+
+publicar:
+	dch -i
+
+crear_deb:
+	pdebuild
+
+compilar:
+	ember build
+
+compilar_live:
+	ember build --watch
 
 version:
 	# patch || minor
@@ -41,29 +58,11 @@ version:
 	@echo ""
 	@echo "make ver_sync"
 
-ver_sync:
+subir_version:
 	git commit -am 'release ${VERSION}'
 	git tag '${VERSION}'
 	git push
 	git push --all
 	git push --tags
-
-server:
-	ember server
-
-rename:
-	@echo ""
-	@echo "$(V)Renaming from 'TXT_NOMBRE' to '${NAME}' $(N)"
-	@echo ""
-	sed 's/node-webkit-ember-seed/${NAME}/g' public/package.json > __tmp; mv __tmp public/package.json
-	sed 's/node-webkit-ember-seed/${NAME}/g' bower.json > __tmp; mv __tmp bower.json
-	sed 's/node-webkit-ember-seed/${NAME}/g' app/index.html > __tmp; mv __tmp app/index.html
-	sed 's/node-webkit-ember-seed/${NAME}/g' config/environment.js > __tmp; mv __tmp config/environment.js
-	sed 's/node-webkit-ember-seed/${NAME}/g' tests/index.html > __tmp; mv __tmp tests/index.html
-	sed 's/node-webkit-ember-seed/${NAME}/g' package > __tmp; mv __tmp package.json
-
-iniciar:
-	npm install
-
 
 .PHONY: dist
