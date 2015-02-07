@@ -1,3 +1,5 @@
+var is_nodewebkit = (typeof process == "object");
+
 if (is_nodewebkit) {
   var fs = require('fs');
 
