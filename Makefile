@@ -33,10 +33,10 @@ iniciar:
 	bower install
 
 ejecutar_linux:
-	nw src
+	nw dist
 
 ejecutar_mac:
-	/Applications/nwjs.app/Contents/MacOS/nwjs src
+	/Applications/nwjs.app/Contents/MacOS/nwjs dist
 
 publicar:
 	dch -i
