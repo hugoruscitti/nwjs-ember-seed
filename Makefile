@@ -38,6 +38,10 @@ ejecutar_linux:
 ejecutar_mac:
 	/Applications/nwjs.app/Contents/MacOS/nwjs dist
 
+test_mac: ejecutar_mac
+
+build: compilar
+
 publicar:
 	dch -i
 
