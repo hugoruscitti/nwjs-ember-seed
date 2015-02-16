@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=TXT_NOMBRE
+Comment=Comment
+Exec=/usr/bin/TXT_NOMBRE
+Terminal=false
+Type=Application
+Icon=TXT_NOMBRE
+Categories=GNOME;GTK;Huayra;Network;
