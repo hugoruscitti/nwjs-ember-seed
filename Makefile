@@ -32,10 +32,12 @@ iniciar:
 	npm install
 	bower install
 
-ejecutar_linux:
+dist: compilar
+
+ejecutar_linux: dist
 	nw dist
 
-ejecutar_mac:
+ejecutar_mac: dist
 	/Applications/nwjs.app/Contents/MacOS/nwjs dist
 
 test_mac: ejecutar_mac
