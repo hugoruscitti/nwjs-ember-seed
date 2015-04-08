@@ -30,7 +30,7 @@ comandos:
 
 iniciar:
 	npm install
-	bower install
+	./node_modules/bower/bin/bower install
 
 dist: compilar
 
