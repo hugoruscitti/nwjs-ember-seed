@@ -51,10 +51,10 @@ crear_deb:
 	dpkg-buildpackage -us -uc
 
 compilar:
-	ember build
+	./node_modules/ember-cli/bin/ember build
 
 compilar_live:
-	ember build --watch
+	./node_modules/ember-cli/bin/ember build --watch
 
 version:
 	# patch || minor
