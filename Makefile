@@ -62,7 +62,9 @@ version:
 	make build
 	@echo "Es recomendable escribir el comando que genera los tags y sube todo a github:"
 	@echo ""
-	@echo "make ver_sync"
+	@echo "make subir_version"
+
+ver_sync: subir_version
 
 subir_version:
 	git commit -am 'release ${VERSION}'
