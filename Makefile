@@ -23,6 +23,7 @@ comandos:
 	@echo ""
 	@echo "    ${G}version${N}         Genera una nueva versión."
 	@echo "    ${G}subir_version${N}   Sube version generada al servidor."
+	@echo "    ${G}log${N}             Muestra los cambios desde el ultimo tag."
 	@echo "    ${G}publicar${N}        Publica el cambio para el paquete deb."
 	@echo "    ${G}crear_deb${N}       Genera el paquete deb para huayra."
 	@echo ""
@@ -72,5 +73,8 @@ subir_version:
 	git push
 	git push --all
 	git push --tags
+
+log:
+	git log ${VERSION}...HEAD --graph --oneline --decorate
 
 .PHONY: dist
