@@ -1,7 +1,7 @@
 {
-  "name": "txt-nombre",
+  "name": "TXTNOMBRE",
   "version": "0.0.0",
-  "description": "Small description for txt-nombre goes here",
+  "description": "Small description for TXTNOMBRE goes here",
   "private": true,
   "directories": {
     "doc": "doc",

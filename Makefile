@@ -1,5 +1,5 @@
 VERSION=0.0.1
-NOMBRE="TXT_NOMBRE"
+NOMBRE="TXTNOMBRE"
 
 N=[0m
 G=[01;32m
@@ -8,7 +8,7 @@ B=[01;34m
 
 comandos:
 	@echo ""
-	@echo "${B}Comandos disponibles para ${G}TXT_NOMBRE${N}"
+	@echo "${B}Comandos disponibles para ${G}TXTNOMBRE${N}"
 	@echo ""
 	@echo "  ${Y}Para desarrolladores${N}"
 	@echo ""

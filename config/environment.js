@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'TXT_NOMBRE',
+    modulePrefix: 'TXTNOMBRE',
     environment: environment,
     baseURL: '',
     locationType: 'hash',

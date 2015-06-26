@@ -1,4 +1,4 @@
-¡Hola, esto es TXT_NOMBRE!
+¡Hola, esto es TXTNOMBRE!
 ==========================
 
 Este proyecto está construido a partir de nwjs-ember-seed,

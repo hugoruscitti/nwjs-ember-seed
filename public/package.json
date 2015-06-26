@@ -1,9 +1,9 @@
 {
   "main": "app://localhost/index.html",
-  "name": "TXT_NOMBRE",
+  "name": "TXTNOMBRE",
   "version": "0.0.1",
   "window": {
-    "title": "TXT_NOMBRE",
+    "title": "TXTNOMBRE",
     "width": 800,
     "height": 500,
     "toolbar": true,

@@ -1,4 +1,4 @@
-dist/* usr/share/TXT_NOMBRE/dist
-bin/TXT_NOMBRE usr/bin/
-debian/TXT_NOMBRE.desktop /usr/share/applications
-debian/TXT_NOMBRE.svg /usr/share/icons/hicolor/scalable/apps
+dist/* usr/share/TXTNOMBRE/dist
+bin/TXTNOMBRE usr/bin/
+debian/TXTNOMBRE.desktop /usr/share/applications
+debian/TXTNOMBRE.svg /usr/share/icons/hicolor/scalable/apps
