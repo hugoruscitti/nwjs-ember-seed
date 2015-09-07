@@ -19,6 +19,8 @@ comandos:
 	@echo "    ${G}ejecutar_linux${N}  Prueba la aplicacion sobre Huayra."
 	@echo "    ${G}ejecutar_mac${N}    Prueba la aplicacion sobre OSX."
 	@echo ""
+	@echo "    ${G}actualizar_tema${N} Descargar e inyecta el tema de huayra."
+	@echo ""
 	@echo "  ${Y}Para distribuir${N}"
 	@echo ""
 	@echo "    ${G}version${N}         Genera una nueva versión."
@@ -30,7 +32,7 @@ comandos:
 
 
 iniciar:
-	npm install
+	npm install --no-option
 	./node_modules/bower/bin/bower install
 
 dist: compilar
@@ -73,6 +75,20 @@ subir_version:
 	git push
 	git push --all
 	git push --tags
+
+actualizar_tema:
+	@rm -r -f master.zip
+	@wget https://github.com/hugoruscitti/huayra-bootstrap-liso/archive/master.zip
+	@unzip master.zip -d tmp_theme
+	@rm -r -f public/libs
+	@rm -r -f public/img
+	@rm -r -f public/fonts
+	@mv tmp_theme/huayra-bootstrap-liso-master/destino/libs public/
+	@mv tmp_theme/huayra-bootstrap-liso-master/destino/img public/
+	@mv tmp_theme/huayra-bootstrap-liso-master/destino/fonts public/
+	@mv tmp_theme/huayra-bootstrap-liso-master/destino/huayra-bootstrap.css public/
+	@rm -r -f master.zip
+	@rm -r -f tmp_theme
 
 log:
 	git log ${VERSION}...HEAD --graph --oneline --decorate

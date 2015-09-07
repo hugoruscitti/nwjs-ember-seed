@@ -10,5 +10,6 @@ if (is_nodewebkit) {
     nativeMenuBar.createMacBuiltin("My App");
     win.menu = nativeMenuBar;
   } catch (ex) {
+    
   }
 }
