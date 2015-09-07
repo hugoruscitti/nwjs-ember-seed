@@ -77,6 +77,7 @@ subir_version:
 	git push --tags
 
 actualizar_tema:
+	@echo "${G}Actualizando el tema${N}"
 	@rm -r -f master.zip
 	@wget https://github.com/hugoruscitti/huayra-bootstrap-liso/archive/master.zip
 	@unzip master.zip -d tmp_theme

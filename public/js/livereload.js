@@ -3,14 +3,14 @@ var DELAY = 2000;
 var refresh = false;
 
 if (is_nodewebkit) {
-  var fs = require('fs');
+  var fs = nodeRequire('fs');
 
   fs.watchFile('index.html', function() {
     if (refresh === false) {
       refresh = true;
       console.log("Detectando cambio en el archivo index.html, actualizando ...");
       setTimeout(function() {
-        require('nw.gui').Window.get().reloadIgnoringCache();
+        nodeRequire('nw.gui').Window.get().reloadIgnoringCache();
       }, DELAY);
     }
   });
